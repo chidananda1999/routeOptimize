@@ -4,6 +4,22 @@ body {
   padding: 0;
   box-sizing: border-box;
   background-color: $primary;
+  font-family: $primary-font-family;
+}
+
+.primaryBtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 24px;
+  width: 164px;
+  background: $secondary;
+  box-shadow: 0px 2px 3px rgba(95, 95, 95, 0.15);
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  color: $primary-btn-color;
 }
 
 main {
@@ -28,6 +44,8 @@ main {
   .main_content {
     width: 92%;
     margin: 0 2rem;
+    display: flex;
+    flex-direction: column;
     header {
       color: $secondary;
       border-bottom: 1px solid $primary-border-color;
@@ -43,7 +61,7 @@ main {
         h3 {
           margin: 0;
           padding: 0;
-          font-family: $primary-font-family;
+
           font-style: normal;
           font-weight: 500;
           font-size: 16px;
@@ -55,19 +73,25 @@ main {
       }
     }
     .warehouseContainer {
+      width: 100%;
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 0.6rem 0;
       border-bottom: 1px solid $primary-border-color;
 
-      > div {
+      .warehouseAddress {
+        width: 38%;
         display: flex;
         align-items: center;
+        justify-content: space-between;
+      }
+
+      .warehouseAddress > div {
+        width: 33%;
       }
 
       span {
-        font-family: $primary-font-family;
         font-style: normal;
         font-weight: 400;
         font-size: 14px;
@@ -82,7 +106,7 @@ main {
         flex-direction: row;
         align-items: center;
         padding: 11px 10px;
-        width: 300px;
+        width: 280px;
         background: #ffffff;
         border: 1px solid #cccccc;
         border-radius: 4px;
@@ -90,7 +114,6 @@ main {
       }
 
       input::placeholder {
-        font-family: $primary-font-family;
         font-style: normal;
         font-weight: 400;
         font-size: 12px;
@@ -98,19 +121,115 @@ main {
         color: $primary-placeholder-color;
       }
 
-      button {
+      .btnDiv {
+        width: 62%;
         display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        padding: 10px 24px;
-        width: 164px;
-        background: $secondary;
-        box-shadow: 0px 2px 3px rgba(95, 95, 95, 0.15);
-        border-radius: 4px;
-        outline: none;
-        border: none;
-        color: $primary-btn-color;
+        justify-content: flex-end;
+      }
+    }
+
+    .mapContainer {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid $primary-border-color;
+      .fileUploadContainer {
+        display: flex;
+        justify-content: space-between;
+        width: 38%;
+        > div {
+          span {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 21px;
+            letter-spacing: 0.05em;
+            text-transform: capitalize;
+            color: $secondary-text-color;
+          }
+        }
+
+        .fileUploadDiv {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          input[type="file"] {
+            display: none;
+          }
+          .customFileUpload {
+            background: #ffffff;
+            border: 1px solid #cccccc;
+            box-shadow: 0px 1px 2px rgba(88, 88, 88, 0.1);
+            border-radius: 4px;
+            cursor: pointer;
+            width: 280px;
+            padding: 11px 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 1rem;
+          }
+          label {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 18px;
+            color: $primary-placeholder-color;
+          }
+
+          .downloadfile {
+            margin: 11px 0;
+            padding: 0;
+          }
+          a {
+            color: $primary-text-color;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 150%;
+            text-decoration-line: underline;
+            text-align: right;
+          }
+        }
+      }
+    }
+    .addressTable {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid $primary-border-color;
+
+      table {
+        width: 100%;
+
+        th {
+          width: auto;
+          text-align: start;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 18px;
+          color: $primary-font-family;
+          opacity: 0.7;
+          padding: 0;
+          margin: 0;
+        }
+
+        tbody {
+          padding: 6px 13px;
+          background-color: #ffffff;
+          border: none;
+          outline: none;
+        }
+        td {
+          text-align: start;
+        }
       }
     }
   }

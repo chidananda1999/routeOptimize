@@ -15,6 +15,7 @@
     "sass-loader": "^13.2.2"
   },
   "dependencies": {
-    "@nuxtjs/google-fonts": "^3.0.0"
+    "@nuxtjs/google-fonts": "^3.0.0",
+    "read-excel-file": "^5.6.1"
   }
 }
